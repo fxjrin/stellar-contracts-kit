@@ -1,0 +1,72 @@
+{
+  "name": "stellar-contracts-kit",
+  "version": "0.1.0",
+  "description": "TypeScript SDK for Soroban smart contract interactions on Stellar",
+  "author": "fxjrin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fxjrin/stellar-contracts-kit.git"
+  },
+  "keywords": [
+    "stellar",
+    "soroban",
+    "smart-contract",
+    "blockchain",
+    "typescript",
+    "sdk",
+    "cli",
+    "type-generator",
+    "wallet",
+    "dapp",
+    "freighter",
+    "lobstr",
+    "cyphras",
+    "web3"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./wallets": {
+      "types": "./dist/wallets/index.d.ts",
+      "import": "./dist/wallets/index.js",
+      "require": "./dist/wallets/index.cjs"
+    }
+  },
+  "bin": {
+    "stellar-contracts-kit": "./dist/cli/generate.js",
+    "sck": "./dist/cli/generate.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@cyphras/sdk": "^0.1.0",
+    "@lobstrco/signer-extension-api": "^2.0.0",
+    "@stellar/freighter-api": "^6.0.0",
+    "@stellar/stellar-sdk": "^15.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "tsup": "^8.4.0",
+    "typescript": "^5.7.3",
+    "vitest": "^4.1.7"
+  }
+}
