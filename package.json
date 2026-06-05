@@ -1,6 +1,6 @@
 {
   "name": "stellar-contracts-kit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "TypeScript SDK for Soroban smart contract interactions on Stellar",
   "author": "fxjrin",
   "license": "MIT",

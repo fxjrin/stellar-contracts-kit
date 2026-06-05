@@ -8,7 +8,7 @@ export type NetworkPreset = 'mainnet' | 'testnet' | 'futurenet'
 
 export const NETWORKS: Record<NetworkPreset, NetworkConfig> = {
   mainnet: {
-    rpcUrl: 'https://mainnet.stellar.validationcloud.io/v1/soroban/rpc',
+    rpcUrl: 'https://mainnet.sorobanrpc.com',
     networkPassphrase: 'Public Global Stellar Network ; September 2015',
     horizonUrl: 'https://horizon.stellar.org',
   },
